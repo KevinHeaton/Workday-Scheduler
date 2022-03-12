@@ -145,3 +145,12 @@ var setTime = function() {
 }
 
 setTime();
+
+$(".saveBtn").on("click", function() {
+    var text = $(this).siblings('.textarea')[0].textContent;
+    var key = $(this).attr("id");
+    localStorage.setItem(key, text);
+});
+
+
+
