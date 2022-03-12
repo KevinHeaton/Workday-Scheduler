@@ -150,7 +150,20 @@ $(".saveBtn").on("click", function() {
     var text = $(this).siblings('.textarea')[0].textContent;
     var key = $(this).attr("id");
     localStorage.setItem(key, text);
+
+    
+
+    
 });
+
+var num = 9;
+
+while (num < 17) {
+    var retrieve = localStorage.getItem(num);
+      $(`.${num}`)[0].textContent = retrieve;
+      num++
+      //console.log(retrieve);
+}
 
 
 
